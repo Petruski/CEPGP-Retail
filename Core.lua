@@ -801,9 +801,9 @@ function CEPGP_decay(amount, msg)
 			else]]
 				EP = math.floor(tonumber(EP)*(1-(amount/100)));
 				if CEPGP_minGPDecayFactor then
-					GP = math.floor((tonumber((GP-BASEGP))*(1-(amount/100)))+BASEGP);
+					GP = CEPGP_round((tonumber((GP-BASEGP))*(1-(amount/100)))+BASEGP);
 				else
-					GP = math.floor((tonumber(GP)*(1-(amount/100))));
+					GP = CEPGP_round((tonumber(GP)*(1-(amount/100))));
 				end
 				if GP < BASEGP then
 					GP = BASEGP;
