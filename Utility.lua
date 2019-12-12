@@ -1685,3 +1685,7 @@ function CEPGP_sendChatMessage(msg, channel)
 		SendChatMessage(msg, channel, CEPGP_LANGUAGE);
 	end
 end
+
+function CEPGP_round(n)
+	return n % 1 >= 0.5 and math.ceil(n) or math.floor(n)
+end
